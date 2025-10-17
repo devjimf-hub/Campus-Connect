@@ -72,13 +72,14 @@ html, body {
   flex-direction: column;
 
 body {
-  background-image: url("public/images/course.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/course.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
 /* PAGE CONTENT */
@@ -130,33 +131,30 @@ nav ul li a:hover {
 
 /* COURSE BOXES */
 .course {
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: transparent;  /* make background transparent */
+  border: 2px solid #ffc107;
   color: white;
-  width: 90%;
-  max-width: 1000px;
   margin: 30px auto;
-  padding: 30px;
+  width: 80%;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(5px); /* Optional: adds a soft blur behind */
 }
 
 .course:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
 }
 
 .course h2 {
   color: #ffc107;
-  margin-bottom: 10px;
 }
 
 .course p {
   line-height: 1.6;
   font-size: 1rem;
-  text-align: justify;
 }
 
 /*MAJOR*/
