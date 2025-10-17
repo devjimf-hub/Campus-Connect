@@ -1,12 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Connect — Forum</title>
+  <link rel="stylesheet" href="forum.css">
 </head>
 <body>
-    <h1>Forum Page</h1>
-    <h4>Welcome to the Forum Page.</h4>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Campus Connect</h1>
+      <p class="tag">Student forum</p>
+    </div>
+    <nav class="main-nav">
+      <a href="#home" class="active">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="left-col">
+      <div class="compose-card">
+        <h2>Start a new thread</h2>
+        <input type="text" placeholder="Thread title" class="input title">
+        <textarea placeholder="Write your post..." class="input body"></textarea>
+        <div class="compose-actions">
+          <select class="input small">
+            <option>General</option>
+            <option>Academics</option>
+            <option>Clubs</option>
+            <option>Events</option>
+          </select>
+          <button class="btn primary">Post Thread</button>
+        </div>
+      </div>
+
+      <div class="threads-list">
+        <h2>Recent threads</h2>
+
+        <article class="thread">
+          <div class="thread-left"><div class="avatar">O</div></div>
+          <div class="thread-content">
+            <h3 class="thread-title">Hapit nasad midterms? TwT</h3>
+            <p class="meta">by <strong>student1829</strong> • 2 hours ago • <span class="tag-cat">General</span></p>
+            <p class="excerpt">Di pwedi ma da og floorwax maam?</p>
+            <div class="thread-stats">
+              <span>Comments 14</span>
+              <span>Likes 342</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="thread">
+          <div class="thread-left"><div class="avatar">X</div></div>
+          <div class="thread-content">
+            <h3 class="thread-title">Kinsay kitas akong ballpen?</h3>
+            <p class="meta">by <strong>iloveu4ever</strong> • Yesterday • <span class="tag-cat">General</span></p>
+            <p class="excerpt">Sa ni kuha sa ako ball, maabot ranya inyo adlaw</p>
+            <div class="thread-stats"><span>Comments 28</span><span>Likes 1.2k</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="right-col">
+      <div class="card highlight">
+        <h3>Announcements</h3>
+        <ul class="announcements">
+          <li><strong>Midterms Schedule</strong> — October 25, 2025 </li>
+          <li><strong>Resume of Face-to-face Classes</strong> — Soon</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Campus Connect</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
+
