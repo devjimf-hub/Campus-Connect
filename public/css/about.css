@@ -84,7 +84,6 @@
       font-size: 0.95em;
     }
 
-    /* ====== RESPONSIVE DESIGN ====== */
     @media (max-width: 768px) {
       .about-section {
         padding: 25px 20px;
