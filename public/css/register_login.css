@@ -64,7 +64,7 @@ input:focus {
 }
 
 .btn:hover {
-  background-color: brown;
+  background-color: rgb(155, 24, 24);
 }
 
 .switch-text {
