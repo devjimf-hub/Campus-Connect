@@ -1,62 +1,4 @@
-/* NAVBAR */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar {
-  background-color: #800000;
-  color: #fff;
-  padding: 1.2rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #ffc107;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
-}
-
-/* GENERAL STYLES */
+  /* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -67,48 +9,82 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-
-body {
-  background-image: url("photo-1542744173-8e7e53415bb0.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/course.jpg') center/cover no-repeat;
   background-attachment: fixed;
 }
 
+/*HEADER */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* PAGE CONTENT */
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #800000;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ffc107;
+}
+
+/* MAIN CONTENT */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  padding-top: 120px; /* Avoid overlap with fixed header */
+  padding-bottom: 50px;
   width: 100%;
-  padding-bottom: 40px;
 }
 
-/* HEADING */
+/* PAGE TITLE */
 h1 {
   text-align: center;
   color: white;
   background-color: #800000;
-  margin: 0;
   padding: 1.5rem 0;
   font-size: 2rem;
   letter-spacing: 1px;
   width: 100%;
+  position: sticky;
+  top: 65px;
+  z-index: 900;
 }
 
 /* SUB NAVIGATION */
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   background-color: #800000;
@@ -130,50 +106,46 @@ nav ul li a:hover {
 
 /* COURSE BOXES */
 .course {
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffc107;
   color: white;
-  width: 90%;
-  max-width: 1000px;
   margin: 30px auto;
-  padding: 30px;
+  width: 80%;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(5px); /* Optional: adds a soft blur behind */
 }
 
 .course:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
 }
 
 .course h2 {
   color: #ffc107;
-  margin-bottom: 10px;
 }
 
 .course p {
   line-height: 1.6;
   font-size: 1rem;
-  text-align: justify;
 }
 
-/*MAJOR*/
+/* MAJOR SECTION */
 .major {
   background-color: #fff;
   color: #333;
   margin-top: 15px;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .major h3 {
-  color: #800000; /* Maroon title */
+  color: #800000;
   margin-bottom: 8px;
 }
-
 
 /* FOOTER */
 footer {
@@ -183,18 +155,18 @@ footer {
   padding: 15px 0;
   font-size: 0.9em;
   width: 100%;
+  margin-top: auto;
 }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .nav-links {
+  .navbar ul {
     flex-direction: column;
     align-items: center;
   }
 
   .course {
-    width: 95%;
-    padding: 20px;
+    width: 90%;
   }
 
   h1 {
