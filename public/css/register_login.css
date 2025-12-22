@@ -53,15 +53,19 @@ input:focus {
 }
 
 .btn {
-  background-color: maroon;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #800000, #a52a2a); /* maroon */
+  color: #ffd700; /* gold text */
+  border: 2px solid #ffd700;
+  border-radius: 25px;
+  font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 
 .btn:hover {
   background-color: brown;
